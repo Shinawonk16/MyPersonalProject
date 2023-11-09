@@ -1,0 +1,144 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.list-no-style .logo span{
+    color: #4CAF50;
+}
+
+.list-no-style .logo {
+    font-size: 20px;
+    font-family: serif;
+}
+.list-no-style .logo{
+    width: 200px;
+    justify-content: flex-end;
+    text-align: end;
+}
+.nav-links{
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+}
+.nav-links ul{
+    gap: 60px;
+    display: flex;
+    list-style-type: none;
+    left: 100px;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    white-space: normal;
+    cursor: pointer;
+}
+.nav-links ul li{
+    text-align: center;
+}
+.page-title {
+    text-align: center;
+    padding: 60px;
+    height: 150px;
+    background-image: url('./default/pizza-for-2-picture-id1016734466.jpeg');
+    background-repeat: inherit;    
+}
+.page-title h1{
+   color:  white;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   transition: .9s;
+}
+
+.w3-container .page-container .page-title .message{
+    transition: 2s;
+}
+.page-title ul{
+    list-style-type: none;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    gap: 100px;
+    font-size: 20px;
+    padding-left: -10px;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(18, 20, 22, 0.15) 0px 0px 0px 1px;
+}
+.page-title ul #search{
+    width: 300px;
+    height: 35px;
+    outline: none;
+    border-radius: 6px;
+    border: none;
+    padding: 10px;
+}
+
+.page-title ul #location{
+    width: 300px;
+    outline: none;
+    border-radius: 5px;
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+    padding-left: 75px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.page-title ul #location:hover{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(18, 20, 22, 0.15) 0px 0px 0px 1px;
+}
+.active{
+    background-color: aqua;
+    padding: 7px;
+    border-radius: 4px;
+    width: 100px;
+}
+.posted-food {
+    padding-left: 90px;
+    padding-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.post-image{
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    padding-left: 90px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(18, 20, 22, 0.15) 0px 0px 0px 1px;
+    height: 410px;
+    padding-left: 0%;
+    text-align: center;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    flex: 1;
+    flex: 10% 0 0;
+}
+
+.post-image:hover{
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+}
+.post-image img{
+    height: 220px;
+    width: 300px;
+    border-radius: 8px;
+}
+.post-image p{
+    margin-top: -12px;
+}
+.images{
+    display: flex;
+    display: flex;
+    gap: 10px;
+    flex: 0 0 30%;
+    border-radius: 20px;
+    padding: 4px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.btn-group a{
+    padding: 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: lightgreen;
+}

@@ -1,0 +1,9 @@
+{
+    "status": true,
+    "message": "Authorization URL created",
+    "data": {
+        "authorization_url": "https://checkout.paystack.com/szbh0xeat6np0ec",
+        "access_code": "szbh0xeat6np0ec",
+        "reference": "dd1befa4-ed09-4ae8-930b-156fa63dc168"
+    }
+}
