@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Shopezy\\Shopezy.csproj": {}
+    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\shopezy\\Shopezy.csproj": {}
   },
   "projects": {
     "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Application\\Application.csproj": {
@@ -230,14 +230,14 @@
         }
       }
     },
-    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Shopezy\\Shopezy.csproj": {
+    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\shopezy\\Shopezy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Shopezy\\Shopezy.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\shopezy\\Shopezy.csproj",
         "projectName": "Shopezy",
-        "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Shopezy\\Shopezy.csproj",
+        "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\shopezy\\Shopezy.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Shopezy\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\shopezy\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"

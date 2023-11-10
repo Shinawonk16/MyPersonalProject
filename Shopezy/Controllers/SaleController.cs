@@ -17,7 +17,7 @@ public class SaleController : ControllerBase
     // [HttpPost("CreateSale")]
 
     [HttpGet("GetByCustomerName")]
-    public async Task<IActionResult> GetByNameAsync([FromQuery] string name)
+    public async Task<IActionResult> GetByNameAsync(string name)
     {
         var sales = await _saleService.GetSalesByCustomerNameAsync(name);
         if (!sales.Status)

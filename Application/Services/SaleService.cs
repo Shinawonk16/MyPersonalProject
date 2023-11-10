@@ -11,10 +11,11 @@ public class SaleService : ISaleService
     private readonly IOrderRepository _orderRepository;
     private readonly IProductRepository _productRepository;
     private readonly ICustomerRepository _customerRepository;
+    private readonly IUserRepository _userRepository;
     private readonly IRequestRepository _requestRepository;
     private readonly IOrderProductRepository _orderProductRepository;
 
-    public SaleService(ISaleRepository saleRepository, IOrderRepository orderRepository, IProductRepository productRepository, ICustomerRepository customerRepository, IRequestRepository requestRepository, IOrderProductRepository orderProductRepository)
+    public SaleService(ISaleRepository saleRepository, IOrderRepository orderRepository, IProductRepository productRepository, ICustomerRepository customerRepository, IRequestRepository requestRepository, IOrderProductRepository orderProductRepository, IUserRepository userRepository = null)
     {
         _saleRepository = saleRepository;
         _orderRepository = orderRepository;
@@ -22,6 +23,8 @@ public class SaleService : ISaleService
         _customerRepository = customerRepository;
         _requestRepository = requestRepository;
         _orderProductRepository = orderProductRepository;
+        _userRepository = userRepository;
+
     }
 
 
@@ -312,7 +315,7 @@ public class SaleService : ISaleService
             Data = orderProductDtos.Select(x => new SalesDto
             {
                 OrderDtos = x.OrderDto,
-                AmountPaid = x.OrderDto.Sum(x => (x.Product.Price * x.Quantity)),
+                AmountPaid = x.AmountPaid,
                 AddressId = x.AddressDto.AddressId
             }).ToList()
         };

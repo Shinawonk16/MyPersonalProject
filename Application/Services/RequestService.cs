@@ -26,8 +26,23 @@ public class RequestService : IRequestService
             Cost = model.Cost,
             Quantity = model.Quantity,
             AdditionalNote = model.AdditionalNote,
-            CreatedAt = model.CreatedAt
+            CreatedAt = model.CreatedAt,
+            Product = new Product
+            {
+                ProductName = model.ProductName,
+
+
+            }
         };
+        var get = await _productRepository.GetAsync(x => x.ProductName.ToLower() == model.ProductName.ToLower());
+        if (get == null)
+        {
+            return new BaseResponse<RequestDto>
+            {
+                Message = "Failed",
+                Status = false,
+            };
+        }
         await _requestRepository.CreateAsync(request);
         await _requestRepository.SaveAsync();
         return new BaseResponse<RequestDto>
@@ -107,9 +122,22 @@ public class RequestService : IRequestService
                 Quantity = model.Quantity,
                 AdditionalNote = model.AdditionalNote,
                 CreatedAt = model.CreatedAt,
-                UpdatedAt = model.UpdatedAt
+                UpdatedAt = model.UpdatedAt,
+                Product = new Product
+                {
+                    ProductName = model.ProductName,
+                }
 
             };
+            var get = await _productRepository.GetAsync(x => x.ProductName.ToLower() == model.ProductName.ToLower());
+            if (get == null)
+            {
+                return new BaseResponse<RequestDto>
+                {
+                    Message = "Failed",
+                    Status = false,
+                };
+            }
             await _requestRepository.UpdateAsync(request);
             await _requestRepository.SaveAsync();
             return new BaseResponse<RequestDto>
@@ -122,7 +150,10 @@ public class RequestService : IRequestService
                     Cost = request.Cost,
                     Quantity = request.Quantity,
                     CreatedAt = request.CreatedAt,
-                    UpdatedAt = request.UpdatedAt
+                    UpdatedAt = request.UpdatedAt,
+                    Product = new ProductDto{
+                        ProductName = request.Product.ProductName
+                    }
 
                 }
             };
