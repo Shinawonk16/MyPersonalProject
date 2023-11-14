@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pezslkGHUmNfy2mhKoxQPOKmBK3zttjM8h9SpYjx9wIBZab+Hassc5QwQAjXUojupj3x8pan4uKAbL3ku8WEjA==",
+  "dgSpecHash": "vitN+eYnLt2zCM+u5gyywZhxg9SQ4DIoOY+GunvAfRcYTbfTU2GqUKRdp5swfsdWh6WRvplczyUcq8hvMxT3fA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

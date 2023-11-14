@@ -8,6 +8,7 @@ public interface IApplicationDbContext
     DbSet<User> User { get; set; }
     DbSet<Customer> Customers { get; set; }
     DbSet<UserRole> UserRoles { get; set; }
+    DbSet<ProductRequest> ProductRequests { get; set; }
 
     DbSet<Role> Roles { get; set; }
     public DbSet<Request> Requests { get; set; }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Domain\\Domain.csproj": {}
+    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Domain\\Domain.csproj": {
+    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"

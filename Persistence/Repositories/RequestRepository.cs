@@ -1,6 +1,7 @@
 using System.Linq.Expressions;
 using Application.Abstractions.IRepository;
 using Domain.Entities;
+using Domain.Enum;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Context;
 
@@ -12,10 +13,10 @@ public class RequestRepository : BaseRepository<Request>, IRequestRepository
     {
     }
 
-    public async Task<IEnumerable<Request>> GetAllRequestAsync()
+   public async Task<IEnumerable<Request>> GetAllRequestAsync()
     {
         return await _context.Requests
-        .Include( x=> x.Product)
+        .Include( x=> x.ProductRequests)
         .ToListAsync(); 
         
     }
@@ -23,7 +24,7 @@ public class RequestRepository : BaseRepository<Request>, IRequestRepository
     public async Task<IList<Request>> GetAllSelected(Expression<Func<Request, bool>> expression)
     {
         return await _context.Requests
-        .Include( x=> x.Product)
+        .Include( x=> x.ProductRequests)
         .Where(x => x.IsDeleted == false && x.IsApproved == true)
         .ToListAsync(); 
     }
@@ -31,7 +32,7 @@ public class RequestRepository : BaseRepository<Request>, IRequestRepository
     public async Task<Request> GetRequestAsync(string id)
     {
         return await _context.Requests
-        .Include( x=> x.Product)
+        .Include( x=> x.ProductRequests)
         .Where(x => x.IsDeleted == false && x.Id == id)
         .SingleOrDefaultAsync();
     }
@@ -39,7 +40,7 @@ public class RequestRepository : BaseRepository<Request>, IRequestRepository
     public async Task<Request> GetSelectedRequestAsync(Expression<Func<Request, bool>> expression)
     {
         return await _context.Requests
-        .Include( x=> x.Product)
+        .Include( x=> x.ProductRequests)
         .Where(x => x.IsDeleted == false )
         .SingleOrDefaultAsync(expression);
     }
@@ -47,7 +48,7 @@ public class RequestRepository : BaseRepository<Request>, IRequestRepository
     public async Task<decimal> GetSumOfApprovedRequestOfTheMonthAsync(int month, int year)
     {
         return await _context.Requests
-        .Where(x => x.CreatedAt.Month == month && x.CreatedAt.Year == year && x.IsApproved == true)
+        .Where(x => x.CreatedAt.Month == month && x.CreatedAt.Year == year && x.IsApproved == true && x.ApprovalStatus == ApprovalStatus.Approved)
         .SumAsync(x => x.Cost);
        
     }

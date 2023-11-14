@@ -31,3 +31,14 @@ C:\Users\USER\Videos\Pictures\Windows\CLH_Final_Project_Batch13\Domain\obj\Debug
 C:\Users\USER\Videos\Pictures\Windows\CLH_Final_Project_Batch13\Domain\obj\Debug\net7.0\refint\Domain.dll
 C:\Users\USER\Videos\Pictures\Windows\CLH_Final_Project_Batch13\Domain\obj\Debug\net7.0\Domain.pdb
 C:\Users\USER\Videos\Pictures\Windows\CLH_Final_Project_Batch13\Domain\obj\Debug\net7.0\ref\Domain.dll
+C:\Users\USER\Desktop\Abdul-Wareez\Apis\MyNew\MyPersonalProject\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\Users\USER\Desktop\Abdul-Wareez\Apis\MyNew\MyPersonalProject\Domain\bin\Debug\net7.0\Domain.dll
+C:\Users\USER\Desktop\Abdul-Wareez\Apis\MyNew\MyPersonalProject\Domain\bin\Debug\net7.0\Domain.pdb
+C:\Users\USER\Desktop\Abdul-Wareez\Apis\MyNew\MyPersonalProject\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\Abdul-Wareez\Apis\MyNew\MyPersonalProject\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\Abdul-Wareez\Apis\MyNew\MyPersonalProject\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\Users\USER\Desktop\Abdul-Wareez\Apis\MyNew\MyPersonalProject\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Abdul-Wareez\Apis\MyNew\MyPersonalProject\Domain\obj\Debug\net7.0\Domain.dll
+C:\Users\USER\Desktop\Abdul-Wareez\Apis\MyNew\MyPersonalProject\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\Users\USER\Desktop\Abdul-Wareez\Apis\MyNew\MyPersonalProject\Domain\obj\Debug\net7.0\Domain.pdb
+C:\Users\USER\Desktop\Abdul-Wareez\Apis\MyNew\MyPersonalProject\Domain\obj\Debug\net7.0\ref\Domain.dll

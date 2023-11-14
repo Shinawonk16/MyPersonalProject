@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Persistence\\Persistence.csproj": {}
+    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Persistence\\Persistence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Application\\Application.csproj": {
+    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Application\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Domain\\Domain.csproj"
+              "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj"
               }
             }
           }
@@ -83,14 +83,14 @@
         }
       }
     },
-    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Domain\\Domain.csproj": {
+    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -136,14 +136,14 @@
         }
       }
     },
-    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Persistence\\Persistence.csproj": {
+    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Persistence\\Persistence.csproj",
+        "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Persistence\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -158,11 +158,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Application\\Application.csproj"
+              "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Application\\Application.csproj"
               },
-              "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\CLH_Final_Project_Batch13\\Domain\\Domain.csproj"
+              "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj"
               }
             }
           }

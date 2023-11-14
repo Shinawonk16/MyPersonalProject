@@ -17,9 +17,9 @@ public class RequestController : ControllerBase
 
 
     [HttpPost("MakeRequest")]
-    public async Task<IActionResult> CreateRequestAsync([FromForm]CreateRequestRequestModel model)
+    public async Task<IActionResult> CreateRequestAsync([FromRoute]string managerId,[FromForm]CreateRequestRequestModel model)
     {
-        var request = await _requestService.CreateRequestAsync(model);
+        var request = await _requestService.CreateRequestAsync(managerId,model);
         if (!request.Status)
         {
             return BadRequest(request);
