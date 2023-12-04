@@ -12,6 +12,7 @@ public class User : BaseEntity
     public string PhoneNumber { get; set; }
     public string ProfilePicture { get; set; }
     public string Password { get; set; }
+    public bool IsVerified { get; set; }
     public Customer Customer { get; set; }
     public Gender Gender { get; set; }
     public Manager Managers { get; set; }

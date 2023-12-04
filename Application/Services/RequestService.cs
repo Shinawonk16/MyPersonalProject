@@ -93,35 +93,53 @@ public class RequestService : IRequestService
 
     public async Task<BaseResponse<RequestDto>> CreateRequestAsync(string managerId, CreateRequestRequestModel model)
     {
-        var request = new Request
+        var test = await _managerReopsitory.GetAsync(x => x.Id == managerId && x.User.IsVerified == true);
+        if (test != null)
         {
-            Cost = model.Cost,
-            Quantity = model.Quantity,
-            AdditionalNote = model.AdditionalNote,
 
-        };
-        var get = await _productRepository.GetAsync(x => x.ProductName.ToLower() == model.ProductName.ToLower());
-        if (get == null)
-        {
+            var request = new Request
+            {
+                Cost = model.Cost,
+                Quantity = model.Quantity,
+                ApprovalStatus = ApprovalStatus.Pending,
+                AdditionalNote = model.AdditionalNote,
+                Manager = new Manager
+                {
+                    Id = test.Id,
+                }
+
+            };
+            var get = await _productRepository.GetAsync(x => x.ProductName.ToLower() == model.ProductName.ToLower());
+            if (get == null)
+            {
+                return new BaseResponse<RequestDto>
+                {
+                    Message = "Failed",
+                    Status = false,
+                };
+            }
+            await _requestRepository.CreateAsync(request);
+            await _requestRepository.SaveAsync();
             return new BaseResponse<RequestDto>
             {
-                Message = "Failed",
-                Status = false,
+                Message = "Successful",
+                Status = true,
+                Data = new RequestDto
+                {
+                    AdditionalNote = request.AdditionalNote,
+                    Cost = request.Cost,
+                    Quantity = request.Quantity,
+                    CreatedAt = request.CreatedAt,
+                    AdminImage = test.User.ProfilePicture,
+                    EnumApprovalStatus = ApprovalStatus.Pending,
+                    AdminName = test.User.UserName
+                }
             };
         }
-        await _requestRepository.CreateAsync(request);
-        await _requestRepository.SaveAsync();
         return new BaseResponse<RequestDto>
         {
-            Message = "Successful",
-            Status = true,
-            Data = new RequestDto
-            {
-                AdditionalNote = request.AdditionalNote,
-                Cost = request.Cost,
-                Quantity = request.Quantity,
-                CreatedAt = request.CreatedAt
-            }
+            Message = "Manager not found",
+            Status = false,
         };
     }
 

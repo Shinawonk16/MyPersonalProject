@@ -126,6 +126,7 @@ public class VerificationService : IVerificationService
         }
         var customer = await _customerRepository.GetAsync(x => x.Id == id);
         customer.User.IsDeleted = false;
+        customer.User.IsVerified = true;
         await _customerRepository.UpdateAsync(customer);
         await _customerRepository.SaveAsync();
 

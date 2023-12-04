@@ -58,6 +58,7 @@ public class ManagerService : IManagerService
             valid.User.ProfilePicture = image;
             valid.User.IsDeleted = false;
             valid.User.Password = password;
+            valid.User.IsVerified = true;
             var adm = await _managerRepository.UpdateAsync(valid);
             await _managerRepository.SaveAsync();
 

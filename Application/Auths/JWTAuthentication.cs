@@ -15,8 +15,8 @@ namespace Application.Auths;
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                // new Claim(ClaimTypes.Email, user.Email),
-                // new Claim(ClaimTypes.Role, user.Role),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Role, user.Role),
             };
             
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));

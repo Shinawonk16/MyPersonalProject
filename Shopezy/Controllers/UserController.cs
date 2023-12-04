@@ -10,6 +10,7 @@ public class UserController : ControllerBase
 {
     private readonly IUserService _userServices;
     private readonly IConfiguration _config;
+    
 
     public UserController(IUserService userServices, IConfiguration config)
     {

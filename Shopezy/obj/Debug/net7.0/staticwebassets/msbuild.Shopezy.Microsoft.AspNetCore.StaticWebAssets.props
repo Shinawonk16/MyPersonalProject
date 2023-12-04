@@ -1,5 +1,21 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\047764e5-a8ce-4e22-8480-c0a8ed33decb_IMG_20230717_094523_642.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopezy</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopezy</BasePath>
+      <RelativePath>assets/images/047764e5-a8ce-4e22-8480-c0a8ed33decb_IMG_20230717_094523_642.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\047764e5-a8ce-4e22-8480-c0a8ed33decb_IMG_20230717_094523_642.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\0768545b-0774-4a2f-8b37-cc982d0a51f7_1.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>Shopezy</SourceId>
@@ -47,6 +63,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\1.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\12749eb9-7e5d-4079-9742-0259e6c37e4d_IMG_20230717_094523_642.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopezy</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopezy</BasePath>
+      <RelativePath>assets/images/12749eb9-7e5d-4079-9742-0259e6c37e4d_IMG_20230717_094523_642.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\12749eb9-7e5d-4079-9742-0259e6c37e4d_IMG_20230717_094523_642.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\130495b2-460b-478c-90c1-c833dcea41e5_14.png))">
       <SourceType>Package</SourceType>
@@ -127,6 +159,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\3875cbfb-a7e1-427d-af1a-563ed426ae7f_49.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\3884e3a2-a95f-40cf-b5ea-2ddfcc00e100_IMG_20230717_094523_642.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopezy</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopezy</BasePath>
+      <RelativePath>assets/images/3884e3a2-a95f-40cf-b5ea-2ddfcc00e100_IMG_20230717_094523_642.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\3884e3a2-a95f-40cf-b5ea-2ddfcc00e100_IMG_20230717_094523_642.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\3c79f76e-d6bc-4717-888b-a1432f5849bb_IMG_20230717_094523_642.jpg))">
       <SourceType>Package</SourceType>
@@ -256,6 +304,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\99d1bd34-abb2-4343-ac7f-2bd763edb1b0_49.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\aa54f10c-cdff-483f-9357-f37407ed7e3e_IMG_20230830_104801_353.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopezy</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopezy</BasePath>
+      <RelativePath>assets/images/aa54f10c-cdff-483f-9357-f37407ed7e3e_IMG_20230830_104801_353.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\aa54f10c-cdff-483f-9357-f37407ed7e3e_IMG_20230830_104801_353.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\ab419e1f-ad2d-4692-81f6-787aab3c14a1_IMG_20230717_094523_642.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Shopezy</SourceId>
@@ -272,6 +336,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\ab419e1f-ad2d-4692-81f6-787aab3c14a1_IMG_20230717_094523_642.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\b079a1d6-ede3-45cd-a686-2d104ccbf7de_25.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopezy</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopezy</BasePath>
+      <RelativePath>assets/images/b079a1d6-ede3-45cd-a686-2d104ccbf7de_25.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\b079a1d6-ede3-45cd-a686-2d104ccbf7de_25.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\b4a5c6d1-5fe0-43ab-a8dc-3e720b476d7d_IMG_20230830_104801_353.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Shopezy</SourceId>
@@ -287,6 +367,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\b4a5c6d1-5fe0-43ab-a8dc-3e720b476d7d_IMG_20230830_104801_353.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\b67ce684-e347-4fb3-be14-7627dcb53beb_IMG_20230717_094523_642.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopezy</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopezy</BasePath>
+      <RelativePath>assets/images/b67ce684-e347-4fb3-be14-7627dcb53beb_IMG_20230717_094523_642.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\b67ce684-e347-4fb3-be14-7627dcb53beb_IMG_20230717_094523_642.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\c106b227-27c0-41ed-b2ba-67fc4e0d1fd1_38.png))">
       <SourceType>Package</SourceType>
@@ -335,6 +431,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\c5e7b1f6-4d7b-4a3d-bcf9-5fef9e803db0_130495b2-460b-478c-90c1-c833dcea41e5_14.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\cc15b5ee-1dbb-43ad-813e-f317f7782692_IMG_20230830_104801_353.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Shopezy</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Shopezy</BasePath>
+      <RelativePath>assets/images/cc15b5ee-1dbb-43ad-813e-f317f7782692_IMG_20230830_104801_353.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\cc15b5ee-1dbb-43ad-813e-f317f7782692_IMG_20230830_104801_353.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\d1e792f5-b187-47d0-b1b9-f0d9ea235a11_39.png))">
       <SourceType>Package</SourceType>

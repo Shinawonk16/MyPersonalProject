@@ -29,10 +29,8 @@ public class CreateRequestRequestModel
 {
     public decimal Cost { get; set; }
     public int Quantity { get; set; }
-    // public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public string ProductName { get; set; }
     public string AdditionalNote { get; set; }
-    public bool IsApproved { get; set; }
 
 
 

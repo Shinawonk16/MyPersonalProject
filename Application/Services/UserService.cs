@@ -43,6 +43,7 @@ public class UserService : IUserService
             Data = new UserDto
             {
                 Email = get.User.Email,
+                UserName = get.User.UserName,
                 Role = get.Role.RoleName,
                 RoleDescription = get.Role.RoleDescription
             }
@@ -81,7 +82,8 @@ public class UserService : IUserService
 
     public async Task<BaseResponse<UserDto>> LoginUserAsync(LoginUserRequsetModel model)
     {
-        var login = await _userRepository.GetAsync(x => x.User.Email == model.Email);
+        var login = await _userRepository.GetAsync(x => x.User.Email == model.Email && x.User.IsVerified == true);
+        var see = await _userRepository.GetAsync(x => x.User.Email == model.Email);
         if (login != null)
         {
             var test = BCrypt.Net.BCrypt.Verify(model.Password, login.User.Password);
@@ -122,11 +124,21 @@ public class UserService : IUserService
             }
 
         }
+        // else if(see.User.IsVerified == false && see.User.Email != model.Email)
+        // {
+        //     return new BaseResponse<UserDto>
+        //     {
+        //         Message = "User not Verified",
+        //         Status = false,
+        //     };
+        // }
+
         return new BaseResponse<UserDto>
         {
-            Message = "Incorrect Password or Email try again",
+            Message = "Incorrect Password/Email  or User not verified ",
             Status = false,
         };
+
     }
 
 }

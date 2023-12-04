@@ -72,13 +72,16 @@ builder.Services.AddScoped<IPaymentService, PaymentService>();
 builder.Services.AddScoped<IVerificationRepository, VerificationRepository>();
 builder.Services.AddScoped<IVerificationService, VerificationService>();
 
-builder.Services.AddScoped<IEmailService, EmailService>();
 
 builder.Services.AddScoped<IShopezyUpload, ShopezyUpload>();
 
 builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
 
+
+// builder.Services.AddScoped<IPaymentService,PaymentService>();
+#endregion
+builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IJWTAuthentication, JWTAuthentication>();
 builder.Services
     .AddAuthentication(auth =>
@@ -100,9 +103,6 @@ builder.Services
             )
         };
     });
-
-// builder.Services.AddScoped<IPaymentService,PaymentService>();
-#endregion
 builder.Services.AddCors(x =>
 x.AddPolicy("Shopezy", a =>
 a.AllowAnyHeader()
@@ -119,6 +119,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
@@ -128,9 +129,12 @@ app.UseCors("Shopezy");
 app.UseAuthentication();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
 app.Run();
