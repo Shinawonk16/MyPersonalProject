@@ -1,3 +1,4 @@
+using System.IdentityModel.Tokens.Jwt;
 using Application.Abstractions.IService;
 using Application.Dto;
 using Microsoft.AspNetCore.Mvc;
@@ -38,14 +39,23 @@ public class UserController : ControllerBase
         return BadRequest(getRole);
     }
     [HttpGet("GetUserByToken")]
-    public async Task<IActionResult> GetUserByTokenAsync([FromQuery] string token)
+    public async Task<IActionResult> GetUserByTokenAsync(string token)
     {
-        var user = await _userServices.GetUserByTokenAsync(token);
-        if (!user.Status)
+        // var user = await _userServices.GetUserByTokenAsync(token);
+        // if (!user.Status)
+        // {
+        //     return BadRequest(user);
+        // }
+        // return Ok(user);
+        
+        var handler = new JwtSecurityTokenHandler();
+        var decryptValue =  handler.ReadJwtToken(token);
+        if (decryptValue != null)
         {
-            return BadRequest(user);
+            return Ok(decryptValue.Claims);
         }
-        return Ok(user);
+        return BadRequest(decryptValue);
+
     }
 
 }

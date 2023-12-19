@@ -1,11 +1,11 @@
 using Application.Abstractions.IService;
 using Application.Auths;
 using Application.Dto;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
 namespace Shopezy.Controllers;
-
 [ApiController]
 [Route("api/[controller]")]
 public class RequestController : ControllerBase
@@ -129,12 +129,13 @@ public class RequestController : ControllerBase
         return Ok(request);
     }
 
+    // [Authorize("Super-Admin")]
     [HttpPut("ApproveRequest/{id}")]
     public async Task<IActionResult> ApproveRequestAsync([FromRoute] string id)
     {
         string token = Request.Headers["Authorization"];
         string extractedToken = token[7..];
-        var isValid = _tokenService.IsTokenValid(_config["Jwt:Key"].ToString(), _config["Jwt:Issuer"].ToString(), extractedToken);
+        var isValid = JWTAuthentication.IsTokenValid(_config["Jwt:Key"].ToString(), _config["Jwt:Issuer"].ToString(), extractedToken);
         if (!isValid)
         {
             return Unauthorized();
@@ -146,12 +147,13 @@ public class RequestController : ControllerBase
         }
         return Ok(expense);
     }
+    [Authorize]
     [HttpPut("RejectRequest/{id}")]
     public async Task<IActionResult> RejectRequestAsync([FromRoute] string id, [FromBody] RejectRequestRequestModel model)
     {
         string token = Request.Headers["Authorization"];
         string extractedToken = token.Substring(7);
-        var isValid = _tokenService.IsTokenValid(_config["Jwt:Key"].ToString(), _config["Jwt:Issuer"].ToString(), extractedToken);
+        var isValid = JWTAuthentication.IsTokenValid(_config["Jwt:Key"].ToString(), _config["Jwt:Issuer"].ToString(), extractedToken);
         if (!isValid)
         {
             return Unauthorized();

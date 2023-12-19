@@ -16,7 +16,9 @@ public class RequestRepository : BaseRepository<Request>, IRequestRepository
    public async Task<IEnumerable<Request>> GetAllRequestAsync()
     {
         return await _context.Requests
-        .Include( x=> x.ProductRequests)
+        .Include( x=> x.Manager)
+        .ThenInclude(x => x.User)
+        .OrderByDescending(x => x.CreatedAt)
         .ToListAsync(); 
         
     }

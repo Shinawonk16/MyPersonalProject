@@ -2002,8 +2002,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj": {
-              "projectPath": "c:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj"
+            "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj"
             }
           }
         }

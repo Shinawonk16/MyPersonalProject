@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "c:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj": {
-                "projectPath": "c:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj"
+              "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj"
               }
             }
           }
@@ -83,14 +83,14 @@
         }
       }
     },
-    "c:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj": {
+    "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "c:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Desktop\\Abdul-Wareez\\Apis\\MyNew\\MyPersonalProject\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"

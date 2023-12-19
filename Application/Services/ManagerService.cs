@@ -94,7 +94,7 @@ public class ManagerService : IManagerService
             );
             if (role == null)
             {
-                return new BaseResponse<ManagerDto> { Message = " Not found", Status = false };
+                return new BaseResponse<ManagerDto> { Message = "Role Not found", Status = false };
             }
             var create = await _managerRepository.CreateAsync(manager);
             await _managerRepository.SaveAsync();
@@ -103,16 +103,16 @@ public class ManagerService : IManagerService
             {
                 Email = manager.User.Email,
                 Id = userRole.UserId,
-                Role = userRole.RoleId
+                Role = model.RoleName
             };
             create.User.UserRoles.Add(userRole);
+            await _managerRepository.SaveAsync();  
             create.User.Token = generatedToken = _tokenService.GenerateToken(
                 _config["Jwt:Key"].ToString(),
                 _config["Jwt:Issuer"].ToString(),
                 user
             );
-            await _managerRepository.UpdateAsync(create);
-            await _managerRepository.SaveAsync();
+            // await _managerRepository.UpdateAsync(create);
             var mailRequest = new MailRequest
             {
                 Subject = "Complete Your Registration",
@@ -129,6 +129,7 @@ public class ManagerService : IManagerService
                 {
                     UserDto = new UserDto
                     {
+                        Token = generatedToken,
                         FirstName = manager.User.FirstName,
                         LastName = manager.User.LastName,
                         Email = manager.User.Email,
@@ -137,7 +138,7 @@ public class ManagerService : IManagerService
                 }
             };
         }
-        return new BaseResponse<ManagerDto> { Message = " Not found", Status = false };
+        return new BaseResponse<ManagerDto> { Message = " Already exist", Status = false };
     }
 
     public async Task<BaseResponse<ManagerDto>> DeleteAsync(string id)

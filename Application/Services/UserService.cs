@@ -122,6 +122,14 @@ public class UserService : IUserService
                     }
                 };
             }
+            else
+            {
+                return new BaseResponse<UserDto>
+                {
+                    Message = "Password not Match",
+                    Status = false,
+                };
+            }
 
         }
         // else if(see.User.IsVerified == false && see.User.Email != model.Email)

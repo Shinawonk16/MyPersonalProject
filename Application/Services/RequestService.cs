@@ -103,6 +103,7 @@ public class RequestService : IRequestService
                 Quantity = model.Quantity,
                 ApprovalStatus = ApprovalStatus.Pending,
                 AdditionalNote = model.AdditionalNote,
+                RequestTime = DateTime.UtcNow.ToLongDateString(),
                 Manager = new Manager
                 {
                     Id = test.Id,
@@ -237,8 +238,36 @@ public class RequestService : IRequestService
 
     public async Task<BaseResponse<IEnumerable<RequestDto>>> GetAllAsync()
     {
-        var get = await _requestRepository.GetAllRequestAsync(); if (get != null)
+        var get = await _requestRepository.GetAllRequestAsync(); if (get.Count() != 0)
         {
+
+            foreach (var item in get)
+            {
+                if ((DateTime.Now - item.CreatedAt).TotalSeconds < 60)
+                {
+                    item.RequestTime = (int)(DateTime.Now - item.CreatedAt).TotalSeconds + " " + "Sec ago";
+                }
+                if ((DateTime.Now - item.CreatedAt).TotalSeconds > 60 && (DateTime.Now - item.CreatedAt).TotalHours < 1)
+                {
+                    item.RequestTime = (int)(DateTime.Now - item.CreatedAt).TotalMinutes + " " + "Mins ago";
+                }
+                if ((DateTime.Now - item.CreatedAt).TotalMinutes > 60 && (DateTime.Now - item.CreatedAt).TotalDays < 1)
+                {
+                    item.RequestTime = (int)(DateTime.Now - item.CreatedAt).TotalHours + " " + "Hours ago";
+                }
+                if ((DateTime.Now - item.CreatedAt).TotalHours > 24 && (DateTime.Now - item.CreatedAt).TotalDays < 30)
+                {
+                    item.RequestTime = (int)(DateTime.Now - item.CreatedAt).TotalDays + " " + "Days ago";
+                }
+                if ((DateTime.Now - item.CreatedAt).TotalDays > 30 && (DateTime.Now - item.CreatedAt).TotalDays <= 365)
+                {
+                    item.RequestTime = ((int)(DateTime.Now - item.CreatedAt).TotalDays / 30) + " " + "Months ago";
+                }
+            }
+
+
+
+
             return new BaseResponse<IEnumerable<RequestDto>>
             {
                 Message = "Successful",
@@ -265,8 +294,35 @@ public class RequestService : IRequestService
     public async Task<BaseResponse<IEnumerable<RequestDto>>> GetAllPendingRequest()
     {
         var request = await _requestRepository.GetAllSelected(x => x.ApprovalStatus == ApprovalStatus.Pending && x.IsApproved == false);
-        if (request != null)
+        if (request.Count() != 0)
         {
+
+            foreach (var item in request)
+            {
+                if ((DateTime.Now - item.CreatedAt).TotalSeconds < 60)
+                {
+                    item.RequestTime = (int)(DateTime.Now - item.CreatedAt).TotalSeconds + " " + "Sec ago";
+                }
+                if ((DateTime.Now - item.CreatedAt).TotalSeconds > 60 && (DateTime.Now - item.CreatedAt).TotalHours < 1)
+                {
+                    item.RequestTime = (int)(DateTime.Now - item.CreatedAt).TotalMinutes + " " + "Mins ago";
+                }
+                if ((DateTime.Now - item.CreatedAt).TotalMinutes > 60 && (DateTime.Now - item.CreatedAt).TotalDays < 1)
+                {
+                    item.RequestTime = (int)(DateTime.Now - item.CreatedAt).TotalHours + " " + "Hours ago";
+                }
+                if ((DateTime.Now - item.CreatedAt).TotalHours > 24 && (DateTime.Now - item.CreatedAt).TotalDays < 30)
+                {
+                    item.RequestTime = (int)(DateTime.Now - item.CreatedAt).TotalDays + " " + "Days ago";
+                }
+                if ((DateTime.Now - item.CreatedAt).TotalDays > 30 && (DateTime.Now - item.CreatedAt).TotalDays <= 365)
+                {
+                    item.RequestTime = ((int)(DateTime.Now - item.CreatedAt).TotalDays / 30) + " " + "Months ago";
+                }
+            }
+
+
+
             return new BaseResponse<IEnumerable<RequestDto>>
             {
                 Message = "Retrived Successful",
@@ -295,9 +351,59 @@ public class RequestService : IRequestService
         throw new NotImplementedException();
     }
 
-    public Task<BaseResponse<IEnumerable<RequestDto>>> GetAllRejectedRequestForTheMonthAsync(int month)
+    public async Task<BaseResponse<IEnumerable<RequestDto>>> GetAllRejectedRequestForTheMonthAsync(int month)
     {
-        throw new NotImplementedException();
+        var request = await _requestRepository.GetAllSelected(x => x.ApprovalStatus == ApprovalStatus.Rejected && x.CreatedAt.Month == month && x.IsApproved == false);
+        if (request.Count() != 0)
+        {
+
+            foreach (var item in request)
+            {
+                if ((DateTime.Now - item.CreatedAt).TotalSeconds < 60)
+                {
+                    item.RequestTime = (int)(DateTime.Now - item.CreatedAt).TotalSeconds + " " + "Sec ago";
+                }
+                if ((DateTime.Now - item.CreatedAt).TotalSeconds > 60 && (DateTime.Now - item.CreatedAt).TotalHours < 1)
+                {
+                    item.RequestTime = (int)(DateTime.Now - item.CreatedAt).TotalMinutes + " " + "Mins ago";
+                }
+                if ((DateTime.Now - item.CreatedAt).TotalMinutes > 60 && (DateTime.Now - item.CreatedAt).TotalDays < 1)
+                {
+                    item.RequestTime = (int)(DateTime.Now - item.CreatedAt).TotalHours + " " + "Hours ago";
+                }
+                if ((DateTime.Now - item.CreatedAt).TotalHours > 24 && (DateTime.Now - item.CreatedAt).TotalDays < 30)
+                {
+                    item.RequestTime = (int)(DateTime.Now - item.CreatedAt).TotalDays + " " + "Days ago";
+                }
+                if ((DateTime.Now - item.CreatedAt).TotalDays > 30 && (DateTime.Now - item.CreatedAt).TotalDays <= 365)
+                {
+                    item.RequestTime = ((int)(DateTime.Now - item.CreatedAt).TotalDays / 30) + " " + "Months ago";
+                }
+            }
+
+
+
+            return new BaseResponse<IEnumerable<RequestDto>>
+            {
+                Message = "Retrived Successful",
+                Status = true,
+                Data = request.Select(x => new RequestDto
+                {
+                    Cost = x.Cost,
+                    AdditionalNote = x.AdditionalNote,
+                    Quantity = x.Quantity,
+                    CreatedAt = x.CreatedAt,
+                    PostedTime = x.RequestTime,
+                    EnumApprovalStatus = x.ApprovalStatus,
+                    StringApprovalStatus = x.ApprovalStatus.ToString(),
+                    CreatedTime = x.CreatedAt.ToLongDateString(),
+                    AdminImage = x.Manager.User.ProfilePicture,
+                    AdminName = x.Manager.User.UserName,
+                }).ToList()
+            };
+        }
+        return new BaseResponse<IEnumerable<RequestDto>> { Message = " Failed", Status = false };
+
     }
 
     public Task<BaseResponse<RequestDto>> GetAsync()

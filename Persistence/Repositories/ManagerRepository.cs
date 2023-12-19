@@ -62,3 +62,4 @@ public class ManagerRepository : BaseRepository<Manager>, IManagerRepository
         .ToListAsync();
     }
 }
+
